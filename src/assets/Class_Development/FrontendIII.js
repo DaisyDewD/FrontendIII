@@ -2,7 +2,7 @@
 import CardApp from "../../Practicas/1Maichus/MaichusApp";
 import PokemonApp from "../../PokemonApp";
 import CounterMesa from "../../Practicas/3Contador/CounterMesa.js";
-import LifeCycle from "../../Practicas/4Rick&Morty/LifeCycles";
+import LifeCycle from "../../Practicas/4Rick_Morty/LifeCycles";
 
 
 

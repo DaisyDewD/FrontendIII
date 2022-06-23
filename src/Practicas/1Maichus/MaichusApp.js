@@ -1,35 +1,28 @@
-import Header from "./Header";
-import PersonalInformation from "./PersonalInformation";
-import SectionInfo from "./SectionInfo";
-import { Info } from "./Info.jsx";
-import Avatar from "./Avatar";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+
+import Home from "./Pages/home/home";
+import About from "./Pages/about/About";
+import Career from "./Pages/career/Career";
+import Education from "./Pages/education/Education";
 
 
 const CardApp = ()=>{
     return (
-        <div className="App">
-          <Header/>
-          <Avatar
-          avatar={Info.avatar.avatar}/>
-
-          <div className="infor">
-          <PersonalInformation 
-            name={Info.personalData.name}
-            lastName={Info.personalData.lastname}
-            age={Info.personalData.age}
-            nationality={Info.personalData.nationality}
-            
-          />
-          <SectionInfo 
-          career={Info.career}/>
-
-          <SectionInfo 
-          education={Info.education}/>
-
-          <SectionInfo
-          bio={Info.bio}/>
-          </div>
-        </div>
+      <BrowserRouter>
+    <Routes>
+      <Route path="/" exact element = {<Home />} />
+      <Route path="/about" element = {<About />} />
+      <Route path="/career" element = {<Career />} />
+      <Route path="/education" element = {<Education />} />
+    </Routes>
+    
+        
+          
+         
+        </BrowserRouter>
       );
 }
 
